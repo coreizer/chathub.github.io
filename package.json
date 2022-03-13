@@ -17,7 +17,7 @@
   },
   "scripts": {
     "watch": "yarn dev watch",
-    "dev": "parcel docs/index.html",
-    "build": "parcel build docs/index.html"
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html --dist-dir docs"
   }
 }
