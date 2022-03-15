@@ -1,15 +1,17 @@
 import $ from 'jquery'
-import GLightbox from 'glightbox'
+import GLightBox from 'glightbox'
 import Headroom from "headroom.js"
 
-const glightbox = GLightbox({
+const glightbox = GLightBox({
   selector: ".glightbox"
 })
 
-var myElement = document.querySelector("header");
+const globalHeader = document.querySelector("header");
+
 // construct an instance of Headroom, passing the element
-var headroom = new Headroom(myElement, {
+const headerRoom = new Headroom(globalHeader, {
   'offset': 0,
 });
+
 // initialise
-headroom.init();
+headerRoom.init();
