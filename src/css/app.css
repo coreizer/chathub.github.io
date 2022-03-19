@@ -9,5 +9,6 @@
 }
 
 .headroom--top {
+  display: none;
   top: 0;
 }
