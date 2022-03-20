@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ChatHub　Foundation - Made by Coreizer</title>
+  <title>ChatHub Foundation - Made by Coreizer</title>
   <link href="./img/favicon.ico" rel="icon" />
   <link href="./css/app.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,16 @@
     rel="stylesheet">
 </head>
 
-<body class="bg-[#121212] font-body">
+<body class="bg-[#121212] font-body overflow-hidden">
+  <div class="loading fixed inset-0 bg-neutral-900 z-[9999]">
+    <div class="flex flex-col h-screen w-full items-center justify-center">
+      <img src="./img/chathub-logo.png" alt="ロゴ" class="h-32">
+      <h4 class="text-neutral-200 text-xl pt-4">
+        <span class="font-black">ChatHub</span>
+        <span>Foundation</span>
+      </h4>
+    </div>
+  </div>
   <header class="header w-full fixed top-0 left-0 right-0 z-50 duration-200 bg-neutral-800">
     <div class="container mx-auto">
       <div class="grid grid-cols-2 gap-10 justify-between items-center py-6">
@@ -29,7 +38,7 @@
         <nav class="list-none justify-self-end">
           <li>
             <a href="#"
-              class="inline-block bg-bf2042 hover:bg-bf2042/80 duration-150 rounded-md py-2 px-6 border border-neutral-500 border-opacity-25 shadow">
+              class="inline-block bg-bf2042 hover:bg-bf2042/80 duration-150 rounded-md py-2 px-6 border border-neutral-500 border-opacity-25 shadow text-sm">
               <span class="font-black">ChatHub</span>
               <span>をダウンロード</span>
             </a>
@@ -199,7 +208,7 @@
     </section>
   </main>
 
-  <footer class="bg-neutral-900 py-16 border-t border-white border-opacity-10">
+  <footer class="py-16">
     <div class="container mx-auto">
       <div class="flex justify-between items-center">
         <p class="text-neutral-200">&copy; 2022 ChatHub Foundation.</p>

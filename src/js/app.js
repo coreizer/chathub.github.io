@@ -15,3 +15,8 @@ const headerRoom = new Headroom(globalHeader, {
 
 // initialise
 headerRoom.init();
+
+// Loading
+$('.loading').delay(500).fadeOut(500, function () {
+  $('body').removeClass('overflow-hidden')
+});
