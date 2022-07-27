@@ -12,3 +12,7 @@
   display: none;
   top: 0;
 }
+.bg-test {
+  background-image: url('../img/bg.jpg');
+  background-position: center;
+}

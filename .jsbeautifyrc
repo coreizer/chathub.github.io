@@ -1,0 +1,13 @@
+{
+  "js": {
+    "indent_size": 2,
+    "brace_style": "end-expand,preserve-inline",
+    "end_with_newline": true
+  },
+  "html": {
+    "indent_size": 2,
+    "extra_liners": [],
+    "end_with_newline": false,
+    "indent_inner_html": false
+  }
+}
