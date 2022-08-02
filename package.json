@@ -1,6 +1,7 @@
 {
   "name": "chathub.github.io",
   "version": "1.0.0",
+  "source": "docs/index.html",
   "repository": "https://github.com/coreizer/chathub.github.io.git",
   "author": "coreizer <coreizer@outlook.com>",
   "license": "MIT",
