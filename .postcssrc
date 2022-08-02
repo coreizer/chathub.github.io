@@ -1,8 +1,5 @@
 {
   "plugins": {
-    "tailwindcss": true,
-    "autoprefixer": {
-      "grid": true
-    }
+    "tailwindcss": true
   }
 }
