@@ -1,8 +1,9 @@
+@import 'npm:glightbox/dist/css/glightbox.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import 'npm:glightbox/dist/css/glightbox.css';
 
 .headroom--unpinned {
   top: -200px;
