@@ -4,7 +4,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      'body': ['"M PLUS 1"', 'sans-serif']
+      'body': ['"Noto Sans JP"', 'sans-serif']
     },
     extend: {
       colors: {
