@@ -56,8 +56,8 @@
   <main role="main" class="min-h-screen">
     <section class="py-24 relative bg-hero before:bg-gradient-to-r before:from-indigo-500 before:to-blue-600 before:w-full before:h-full before:inset-0 before:absolute">
       <div class="container mx-auto">
-        <div class="grid grid-cols-2 gap-10">
-          <div class="relative">
+        <div class="flex flex-row justify-between">
+          <div class="relative z-10 basis-1/2">
             <div class="mb-8 inline-block bg-neutral-700 rounded">
               <p class="px-5 py-1.5 text-white text-sm">配信者に必要なものを全て1か所に</p>
             </div>
@@ -74,8 +74,8 @@
             </div>
           </div>
 
-          <div class="relative">
-            <img class="block z-10 ml-32 scale-150 transform-gpu" src="./img/preview@x1.png" alt="">
+          <div class="basis-10/12">
+            <img class="ml-32 block z-10  transform-gpu" src="./img/preview@x1.png" alt="">
           </div>
         </div>
       </div>
@@ -142,7 +142,7 @@
     </section>
   </main>
 
-  <footer class="py-16 bg-neutral-800">
+  <footer class="py-12 bg-neutral-800">
     <div class="container mx-auto">
       <div class="flex justify-between items-center">
         <p class="text-neutral-400 font-this">&copy; 2022 ChatHub Foundation.</p>
