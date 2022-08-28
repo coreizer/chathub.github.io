@@ -12,3 +12,8 @@
   display: none;
   top: 0;
 }
+
+.bg-hero::before {
+  content: '';
+  clip-path: polygon(0 0 , 100% 0, 100% 70%, 0 100%)
+}
