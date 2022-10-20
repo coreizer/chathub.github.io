@@ -1,19 +1,10 @@
-@import 'npm:glightbox/dist/css/glightbox.css';
+@import "npm:glightbox/dist/css/glightbox.css";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.headroom--unpinned {
-  top: -200px;
-}
-
-.headroom--top {
-  display: none;
-  top: 0;
-}
-
 .bg-hero::before {
-  content: '';
-  clip-path: polygon(0 0 , 100% 0, 100% 70%, 0 100%)
+  content: "";
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
 }

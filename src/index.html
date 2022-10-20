@@ -13,7 +13,6 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RT7ES73LT5"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-
     function gtag() {
       dataLayer.push(arguments);
     }
@@ -21,17 +20,8 @@
     gtag('config', 'G-RT7ES73LT5');
   </script>
 </head>
-<body class="bg-white font-body relative overflow-x-hidden">
-  <div class="loading fixed inset-0 bg-neutral-800 z-[9999]">
-    <div class="flex flex-col h-screen w-full items-center justify-center">
-      <img src="./img/chathub-logo.png" alt="ロゴ" class="h-32">
-      <h4 class="text-neutral-200 text-xl pt-4">
-        <span class="font-black">ChatHub</span>
-        <span>Foundation</span>
-      </h4>
-    </div>
-  </div>
-  <header class="header w-full fixed top-0 left-0 right-0 z-50 duration-200 backdrop-blur-sm bg-black/80">
+<body class="bg-zinc-900 font-body relative overflow-x-hidden">
+  <header class="header w-full sticky top-0 left-0 right-0 z-50 duration-200 bg-zinc-800">
     <div class="container mx-auto">
       <div class="grid grid-cols-2 gap-10 justify-between items-center py-6">
         <div class="block justify-self-start">
@@ -54,15 +44,15 @@
   </header>
 
   <main role="main" class="min-h-screen">
-    <section class="py-24 relative bg-hero before:bg-gradient-to-r before:from-indigo-500 before:to-blue-600 before:w-full before:h-full before:inset-0 before:absolute">
+    <section class="pt-48 pb-32 relative bg-hero before:bg-gradient-to-r before:from-indigo-600 before:to-blue-500 before:w-full before:h-full before:inset-0 before:absolute">
       <div class="container mx-auto">
         <div class="flex flex-row justify-between">
           <div class="relative z-10 basis-1/2">
-            <div class="mb-8 inline-block bg-neutral-700 rounded">
-              <p class="px-5 py-1.5 text-white text-sm">配信者に必要なものを全て1か所に</p>
+            <div class="mb-8 inline-block bg-zinc-800 rounded">
+              <p class="px-5 py-1.5 text-white text-sm">クローズベータ実施中</p>
             </div>
 
-            <h1 class="mb-8 font-bold text-white text-4xl">現代のための連携アプリケーション</h1>
+            <h1 class="mb-8 font-bold text-white text-4xl">配信者に必要なものを全て1か所に</h1>
             <p class="text-white  text-sm">YouTube, Mildom等の放送プラットフォームのコメントを 棒読みちゃん
               に専用プラグインと連携して、チャットメッセージを読み上げるアプリケーション</p>
 
@@ -81,19 +71,101 @@
       </div>
     </section>
 
-    <section class="py-24">
-      <div class="container mx-auto">
-        <div class="grid grid-cols-2 gap-10">
-          <div class="relative">
-            <div class="mb-8 inline-block bg-neutral-700 rounded">
-              <p class="px-5 py-1.5 text-white text-sm">簡単な設定</p>
+    <section class="relative mt-32 py-32">
+        <div class="max-w-6xl mx-auto">
+          <div class="shadow rounded bg-zinc-200">
+            <div class="py-14 flex items-center justify-center flex-col">
+              <h2 class="text-2xl text-zinc-800">クローズベータ実施中</h2>
+              <p class="pt-3  text-zinc-700">現在、完全版のリリースの準備を進めていますが、限られてた機能を試すことができます。</p>
+              <a href="https://twitter.com/coreizer" class="mt-8 px-8 py-3 bg-zinc-900 text-zinc-200 rounded hover:bg-zinc-700 duration-200">詳細についてお問い合わせする - 無料</a>
             </div>
+          </div>
+        </div>
+    </section>
 
-            <h2 class="font-semibold text-2xl pb-2">なぜChatHubを使う?</h2>
-            <p class="text-neutral-800">複雑な設定を一切必要とせず、導入後直ぐに使いこなすことが可能です。</p>
+    <section class="relative py-32">
+      <div class="container mx-auto">
+        <div class="flex flex-row items-center">
+          <div class="relative basis-3/5">
+            <h2 class="text-zinc-200 text-2xl font-medium">ChatHubの機能</h2>
+
+            <div class="mt-12 grid grid-cols-2 gap-12">
+              <div>
+                <h2 class="text-xl text-zinc-200">テーマ</h2>
+                <ul class="mt-4 space-y-2">
+                  <li class="flex items-center">
+                    <ion-icon name="checkmark-outline" class="text-green-200 mr-2"></ion-icon>
+                    <span class="text-zinc-200 text-sm">ライト</span>
+                  </li>
+                  <li class="flex items-center">
+                    <ion-icon name="checkmark-outline" class="text-green-200 mr-2"></ion-icon>
+                    <span class="text-zinc-200 text-sm">ダーク</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h2 class="text-xl text-zinc-200">コメント表示</h2>
+                <ul class="mt-4 space-y-2">
+                  <li class="flex items-center">
+                    <ion-icon name="checkmark-outline" class="text-green-500 mr-2"></ion-icon>
+                    <span class="text-zinc-200 text-sm">自動スクロール</span>
+                  </li>
+                  <li class="flex items-center">
+                    <ion-icon name="checkmark-outline" class="text-green-500 mr-2"></ion-icon>
+                    <span class="text-zinc-200 text-sm">視聴者数の表示</span>
+                  </li>
+                  <li class="flex items-center">
+                    <ion-icon name="checkmark-outline" class="text-green-500 mr-2"></ion-icon>
+                    <span class="text-zinc-200 text-sm">視聴者数のパネル左右設定</span>
+                  </li>
+                  <li class="flex items-center">
+                    <ion-icon name="checkmark-outline" class="text-green-500 mr-2"></ion-icon>
+                    <span class="text-zinc-200 text-sm">クイックアクセスパネル</span>
+                  </li>
+                  <li class="flex items-center">
+                    <ion-icon name="checkmark-outline" class="text-green-500 mr-2"></ion-icon>
+                    <span class="text-zinc-200 text-sm">フォント設定</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h2 class="text-xl text-zinc-200">ライブチャット</h2>
+                <ul class="mt-4 space-y-2">
+                  <li class="flex items-center">
+                    <ion-icon name="checkmark-outline" class="text-green-500 mr-2"></ion-icon>
+                    <span class="text-zinc-200 text-sm">特殊メッセージの効果音の再生（個別設定可)</span>
+                  </li>
+                  <li class="flex items-center">
+                    <ion-icon name="checkmark-outline" class="text-green-500 mr-2"></ion-icon>
+                    <span class="text-zinc-200 text-sm">途中から開始しても以前のメッセージの読み込み（個別設定可)</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h2 class="text-xl text-zinc-200">その他</h2>
+
+                 <ul class="mt-4 space-y-2">
+                  <li class="flex items-center">
+                    <ion-icon name="checkmark-outline" class="text-green-500 mr-2"></ion-icon>
+                    <span class="text-zinc-200 text-sm">警告、エラー等のアプリケーションを自動で報告</span>
+                  </li>
+                  <li class="flex items-center">
+                    <ion-icon name="checkmark-outline" class="text-green-500 mr-2"></ion-icon>
+                    <span class="text-zinc-200 text-sm">設定ファイルの同期</span>
+                  </li>
+                  <li class="flex items-center">
+                    <ion-icon name="checkmark-outline" class="text-green-500 mr-2"></ion-icon>
+                    <span class="text-zinc-200 text-sm">クイックアクセスの操作を別PCと同期する</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
 
-          <div class="max-w-2xl mx-auto">
+          <div class="basis-2/5">
             <video autoplay muted loop>
               <source src="./videos/easy-settings.mp4" type="video/mp4">
             </video>
@@ -102,12 +174,11 @@
       </div>
     </section>
 
-    <section class="py-24">
+    <section class="relative py-32">
       <div class="container mx-auto">
-        <div class="mb-8">
-          <h3 class="text-neutral-800 font-semibold">スクリーンショット一覧</h3>
-        </div>
-        <div class="grid grid-cols-4 gap-8">
+        <h3 class="text-zinc-200 text-2xl font-medium">スクリーンショット一覧</h3>
+
+        <div class="mt-12 grid grid-cols-4 gap-8">
           <div class="overflow-hidden">
             <a href="./img/screenshots/home.png" class="block glightbox">
               <img src="./img/screenshots/home.png" alt="ホーム">
@@ -142,10 +213,10 @@
     </section>
   </main>
 
-  <footer class="py-12 bg-neutral-800">
+  <footer class="py-6 bg-zinc-800">
     <div class="container mx-auto">
       <div class="flex justify-between items-center">
-        <p class="text-neutral-400 font-this">&copy; 2022 ChatHub Foundation.</p>
+        <p class="text-zinc-500 font-this">&copy; 2022 ChatHub Foundation.</p>
         <ul class="flex items-center space-x-6">
           <li>
             <a href="https://twitter.com/coreizer" target="_blank" class="duration-100 text-[#1D9BF0]">
@@ -162,6 +233,5 @@
     </div>
   </footer>
 </body>
-<script type="module" src="./js/app.js"></script>
 <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </html>
