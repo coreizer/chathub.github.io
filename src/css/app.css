@@ -1,14 +1,7 @@
-@import "npm:glightbox/dist/css/glightbox.css";
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html {
   scroll-behavior: smooth;
-}
-
-.bg-hero::before {
-  content: "";
-  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
 }
