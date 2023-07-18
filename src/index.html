@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" :class="{ 'dark': darkMode }" x-data="{darkMode: $persist(false)}">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ChatHub 公式サイト</title>
-    <link href="./img/favicon.ico" rel="icon" />
-    <link href="./css/app.css" rel="stylesheet" />
+    <link rel="icon" href="./img/favicon.ico" />
+    <link rel="stylesheet" href="./css/app.scss" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet" />
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/persist@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZ81KP6TMG"></script>
     <script>
       window.dataLayer = window.dataLayer || []
@@ -20,97 +22,183 @@
       gtag('config', 'G-NZ81KP6TMG')
     </script>
   </head>
-  <body class="relative bg-[#141414] font-body overflow-x-hidden">
-    <main role="main" class="min-h-screen">
-      <div class="container mx-auto py-52">
-        <div class="flex flex-col items-center justify-center">
-          <div class="">
-            <div class="absolute inset-0"></div>
+  <body class="relative bg-zinc-100 dark:bg-[#141414] font-body overflow-x-hidden">
+    <header
+      class="w-full fixed top-0 inset-x-0 border-b z-50 border-zinc-200/75 dark:border-zinc-100/5 bg-zinc-100 dark:bg-[#141414]">
+      <div class="container mx-auto">
+        <div class="flex items-center justify-between py-4">
+          <div>
+            <a href="https://chathub.abitun.club/" class="flex items-center gap-2 text-zinc-800 dark:text-zinc-300">
+              <img src="./img/logo.png" alt="" class="w-8" />
+              <span class="font-bold">ChatHub</span>
+            </a>
           </div>
-          <img src="img/logo.png" class="h-48" alt="" />
-          <h2 class="text-3xl text-white/70 pt-8">読み上げが必要な配信者に必要なものを全て1か所に</h2>
-          <p class="text-sm text-white/50 max-w-3xl pt-4">
-            放送のコメントを棒読みちゃん専用プラグインと連携して、チャットメッセージを読み上げるアプリケーション
-          </p>
-        </div>
 
-        <div class="mt-24">
-          <div class="container mx-auto max-w-5xl grid gap-4 grid-cols-3">
-            <div class="flex w-full h-full">
-              <div class="relative w-full rounded-xl bg-zinc-900 p-8">
-                <div class="flex items-center gap-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="w-6 h-6 text-zinc-300">
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
-                  </svg>
-
-                  <h2 class="text-zinc-300">テーマ</h2>
-                </div>
-                <p class="text-zinc-500 mt-2">ChatHubはダーク・ライトモードに対応しています。</p>
-              </div>
-            </div>
-
-            <div class="flex w-full h-full">
-              <div class="relative w-full rounded-xl bg-zinc-900 p-8">
-                <div class="flex items-center gap-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="w-6 h-6 text-zinc-300">
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
-                  </svg>
-
-                  <h2 class="text-zinc-300">マルチプラットフォーム</h2>
-                </div>
-                <p class="text-zinc-500 mt-2">YouTube・Mildom・Twitchをはじめ、8プラットフォームに対応しています</p>
-              </div>
-            </div>
-
-            <div class="flex w-full h-full">
-              <div class="relative w-full rounded-xl bg-zinc-900 p-8">
-                <div class="flex items-center gap-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="w-6 h-6 text-zinc-300">
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
-                  </svg>
-
-                  <h2 class="text-zinc-300">Philips Hue</h2>
-                </div>
-                <p class="text-zinc-500 mt-2 text-sm">
-                  YouTube・SuperChatなどの特別なメッセージを検知した際に、点灯できます。
-                </p>
-              </div>
-            </div>
-          </div>
+          <button @click="darkMode = !darkMode">
+            <template x-if="darkMode">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 text-zinc-200">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+              </svg>
+            </template>
+            <template x-if="!darkMode">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 text-zinc-800">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+              </svg>
+            </template>
+          </button>
         </div>
       </div>
-      <footer class="relative">
-        <div class="mx-auto container">
-          <p class="text-center text-zinc-600">&copy; 2023 coreizer.</p>
+    </header>
+
+    <main role="main">
+      <section class="pt-32">
+        <div class="container mx-auto">
+          <div class="flex flex-col items-center justify-center gap-4">
+            <a
+              class="inline-block bg-sky-400 hover:bg-sky-300 dark:bg-sky-400/10 dark:hover:bg-sky-400/20 text-sky-100 dark:text-sky-400 px-3.5 py-1.5 rounded-full text-sm"
+              href="https://twitter.com/coreizer">
+              Twitterをフォローする
+            </a>
+            <h1 class="text-zinc-800 dark:text-zinc-200 text-7xl font-bold tracking-wide">ChatHub</h1>
+            <p class="text-zinc-500">
+              放送のコメントを棒読みちゃん専用プラグインと連携して、チャットメッセージを読み上げるアプリケーション
+            </p>
+          </div>
         </div>
-      </footer>
+      </section>
+
+      <section class="py-24">
+        <div class="relative">
+          <div class="container mx-auto">
+            <form action="https://chathub.abitun.club/" method="get">
+              <div class="flex justify-center items-center gap-4">
+                <input
+                  name="email"
+                  type="text"
+                  placeholder="your@chathub.com"
+                  class="appearance-none focus:outline-none text-zinc-300 bg-zinc-800 rounded-lg py-1.5 px-6" />
+                <button
+                  type="submit"
+                  class="bg-sky-500 hover:bg-sky-500/80 text-sky-100 hover:text-sky-50 py-1.5 px-5 rounded-lg">
+                  通知を受け取る
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-24">
+        <div class="container mx-auto">
+          <div class="relative flex items-center justify-center">
+            <div class="spotlight"></div>
+            <img class="rounded-md" src="./img/app.png" alt="ChatHub Screenshot" width="1200" />
+          </div>
+        </div>
+      </section>
+
+      <section class="py-24">
+        <div class="container mx-auto">
+          <div class="flex flex-col items-center justify-center space-y-2">
+            <h1 class="text-zinc-800 dark:text-zinc-200 text-5xl">機能</h1>
+          </div>
+
+          <div class="mt-24 grid grid-cols-3 gap-4">
+            <article class="bg-zinc-200 dark:bg-zinc-800 overflow-hidden rounded-md p-5">
+              <div class="flex flex-row gap-8">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-12 h-12 text-sky-500">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z" />
+                </svg>
+
+                <div class="space-y-1">
+                  <h2 class="text-zinc-800 dark:text-zinc-300">データストア</h2>
+                  <p class="text-sm font-thin text-zinc-500">
+                    クラウドに設定ファイルをバックアップと同期機能を持っています
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="bg-zinc-200 dark:bg-zinc-800 rounded-md p-5">
+              <div class="flex flex-row gap-8">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-12 h-12 text-sky-500">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+                </svg>
+
+                <div class="space-y-1">
+                  <h2 class="text-zinc-800 dark:text-zinc-300">スマートライト</h2>
+                  <p class="text-sm font-thin text-zinc-500">Philips Hue制のスマートライトとの連携機能を持っています</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="bg-zinc-200 dark:bg-zinc-800 overflow-hidden rounded-md p-5">
+              <div class="flex flex-row gap-8">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="-mt-4 w-20 h-20 text-sky-500">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                </svg>
+
+                <div class="space-y-1">
+                  <h2 class="text-zinc-800 dark:text-zinc-300">ダッシュボード</h2>
+                  <p class="text-sm font-thin text-zinc-500">
+                    ChatHub用のアカウントを取得すれば、ウェブからの管理を行えます。特定のメッセージ削除やブロック機能などあります。
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer class="py-5">
+      <div class="container mx-auto">
+        <p class="text-zinc-500 text-center">&copy; 2023 ChatHub and coreizer.</p>
+      </div>
+    </footer>
   </body>
 </html>
