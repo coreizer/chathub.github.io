@@ -4,7 +4,7 @@
 
   <h3 align="center">chathub.github.io</h3>
 
-このプロジェクトは [ChatHub](https://github.com/coreizer/ChatHub) の公式ウェブサイトです。
+このプロジェクトは [ChatHub](https://github.com/coreizer/ChatHub) の公式ウェブサイトです
 
   <p align="center">
     <a href="https://github.com/coreizer/chathub.github.io/issues">バグ報告</a>
