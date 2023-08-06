@@ -25,7 +25,7 @@
 
 ## 📦 ビルド方法
 
-```
+<!-- ```
 # 依存関係パッケージをインストールします
 $ yarn install
 
@@ -38,6 +38,58 @@ $ yarn start
 
 # 制的プロジェクトを生成する
 $ yarn generate
+``` -->
+
+依存関係のインストール方法
+
+```bash
+# npm
+npm install
+
+# pnpm
+pnpm install
+
+# yarn
+yarn install
+```
+
+開発サーバーの起動方法: `http://localhost:3000`
+
+```bash
+# npm
+npm run dev
+
+# pnpm
+pnpm run dev
+
+# yarn
+yarn dev
+```
+
+本番用のアプリケーションをビルドします:
+
+```bash
+# npm
+npm run build
+
+# pnpm
+pnpm run build
+
+# yarn
+yarn build
+```
+
+静的サイトのデプロイ:
+
+```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm run preview
+
+# yarn
+yarn preview
 ```
 
 ## 🪧 Todo
