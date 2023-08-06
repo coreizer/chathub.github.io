@@ -53,7 +53,7 @@ pnpm install
 yarn install
 ```
 
-開発サーバーの起動方法: `http://localhost:3000`
+開発サーバーの起動: `http://localhost:3000`
 
 ```bash
 # npm
@@ -66,7 +66,7 @@ pnpm run dev
 yarn dev
 ```
 
-本番用のアプリケーションをビルドします:
+アプリのビルド:
 
 ```bash
 # npm
