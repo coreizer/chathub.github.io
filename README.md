@@ -50,4 +50,4 @@ $ yarn generate
 
 ## ⚖️ ライセンス
 
-このプロジェクトのライセンスは [MIT License](LICENSE)です。詳細について[ライセンスファイル](LICENSE)を見てください。
+このプロジェクトのライセンスは [MIT License](https://opensource.org/license/mit/)です。詳細について[ライセンスファイル](LICENSE)を見てください。
